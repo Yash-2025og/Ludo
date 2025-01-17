@@ -1,39 +1,39 @@
 .qzl-game-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  
-  .qzl-board {
-    border: 2.5px solid black;
-    padding: 2.5px;
-    position: relative;
-  }
-  
-  .qzl-left-side {
-    border: 5px solid black;
-  }
-  
-  .qzl-right-side {
-    border: 5px solid black;
-  }
-  
-  .qzl-red-container {
-    border: 5px dashed #c50000;
-  }
-  
-  .qzl-green-container {
-    border: 5px dashed #0cbd15;
-  }
-  
-  .qzl-yellow-container {
-    border: 5px dashed #cfcc00;
-  }
-  
-  .qzl-blue-container {
-    border: 5px dashed #0066b9;
-  }
-  /*# sourceMappingURL=ludo.css.map */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.qzl-board {
+  border: 2.5px solid black;
+  padding: 2.5px;
+  position: relative;
+}
+
+.qzl-left-side {
+  border: 5px solid black;
+}
+
+.qzl-right-side {
+  border: 5px solid black;
+}
+
+.qzl-red-container {
+  border: 5px dashed #c50000;
+}
+
+.qzl-green-container {
+  border: 5px dashed #0cbd15;
+}
+
+.qzl-yellow-container {
+  border: 5px dashed #cfcc00;
+}
+
+.qzl-blue-container {
+  border: 5px dashed #0066b9;
+}
+/*# sourceMappingURL=ludo.css.map */
