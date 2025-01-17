@@ -1,0 +1,377 @@
+$colors:(
+    lYellow:#fffb00,
+    lRed:#ff0909,
+    lGreen:#00ff00,
+    lBlue:#008cff,
+    dGreen:#009708,
+    dYellow:#9e9c0a,
+    dRed:#c50000,
+    dBlue:#1260a0,
+);
+
+@function getColor($colorKey){
+    @return map-get($colors, $colorKey );
+}
+
+.qzl-board-block{
+    height: 40%;
+    width: 40%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qzl-board-blockH{
+    height: 20%;
+    width: 40%;
+    border: 2px solid black;
+    display: grid;
+    grid-gap: 0 0;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+.qzl-board-blockV{
+    height: 40%;
+    width: 20%;
+    border: 2px solid black;
+    display: grid;
+    grid-gap: 0 0;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
+}
+
+.qzl-board-blockC{
+    height: 20%;
+    width: 20%;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+}
+
+.qzl-block-grid{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.qzl-grid-child{
+    height: 95%;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+.qzl-grid-no{
+    position: absolute;
+    bottom: 0;
+    right: 1px;
+    font-size: 0.6rem;
+}
+
+.qzl-gt-cont{
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    display: grid;
+    grid-gap: 0 0;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    border: 2px solid black;
+}
+.qzl-gtc{
+    height: 50%;
+    width: 50%;
+    margin: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.qzl-gtc1{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.qzl-gtc2{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.qzl-gtc3{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.qzl-gtc4{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.qzl-gtb{
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    background: rgb(177, 177, 177);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qzl-gt{
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+}
+
+.qzl-brd-bl-red{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.qzl-brd-bl-green{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.qzl-brd-bl-yellow{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.qzl-brd-bl-blue{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.qzl-brd-bl-h1{
+    position: absolute;
+    left: 0;
+    top: 40%;
+}
+
+.qzl-brd-bl-h2{
+    position: absolute;
+    right: 0;
+    top: 40%;
+}
+
+.qzl-brd-bl-v1{
+    position: absolute;
+    left: 40%;
+    top: 0;
+}
+
+.qzl-brd-bl-v2{
+    position: absolute;
+    left: 40%;
+    bottom: 0;
+}
+
+.redB {
+    background: getColor(lRed);
+}
+  
+.greB {
+    background: getColor(lGreen);
+}
+  
+.yelB {
+    background: getColor(lYellow);
+}
+  
+.bluB {
+    background: getColor(lBlue);
+}
+  
+.whiB {
+    background: white;
+}
+
+.whiC{
+    color: white;
+}
+
+.redC{
+    color: getColor(dRed);
+}
+
+.greC{
+    color: getColor(dGreen);
+}
+
+.yelC{
+    color: getColor(dYellow);
+}
+
+.bluC{
+    color: getColor(dBlue);
+}
+
+.graB{
+    background: #949393;
+}
+
+
+/**
+
+Left Right Sides
+Home Styles
+
+*/
+
+.qzl-home-holder{
+    height: 100%;
+    width: 100%;
+    border: 2px solid black;
+    position: relative;
+}
+
+.qzl-home-red{
+    width: 50%;
+    height: 100%;
+    clip-path: polygon(0% 0%, 50% 25%, 50% 75%, 0% 100%);
+    background: getColor(lRed);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.qzl-home-green{
+    width: 100%;
+    height: 50%;
+    clip-path: polygon(0% 0%, 100% 0%, 75% 50%, 25% 50%);
+    background: getColor(lGreen);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.qzl-home-yellow{
+    width: 50%;
+    height: 100%;
+    clip-path: polygon(50% 75%, 50% 25%, 100% 0%, 100% 100%);
+    background: getColor(lYellow);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.qzl-home-blue{
+    width: 100%;
+    height: 50%;
+    clip-path: polygon(0% 100%, 25% 50%, 75% 50%, 100% 100%);
+    background: getColor(lBlue);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.qzl-dice-holder{
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    border: 4px solid black;
+}
+
+.qzl-h50{
+    height: 50%;
+}
+.qzl-w25{
+    width: 25%;
+}
+
+.qzl-home-bed-red{
+    height: 60%;
+    width: 30%;
+    background: black;
+    position: relative;
+    left: 10%;
+    top: 20%;
+    border-radius: 100%;
+}
+.qzl-home-bed-green{
+    height: 30%;
+    width: 60%;
+    background: black;
+    position: relative;
+    left: 20%;
+    top: 10%;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+}
+.qzl-home-bed-yellow{
+    height: 60%;
+    width: 30%;
+    background: black;
+    position: relative;
+    left: 60%;
+    top: 20%;
+    border-radius: 100%;
+}
+.qzl-home-bed-blue{
+    height: 30%;
+    width: 60%;
+    background: black;
+    position: relative;
+    left: 20%;
+    top: 60%;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.qzl-hrb{
+    height: 25%;
+    width: 100%;
+    border: 0.25px solid getColor(lRed);
+}
+
+.qzl-hgb{
+    height: 100%;
+    width: 25%;
+    border: 0.25px solid getColor(lGreen);
+}
+
+.qzl-hyb{
+    height: 25%;
+    width: 100%;
+    border: 0.25px solid getColor(lYellow);
+}
+
+.qzl-hbb{
+    height: 100%;
+    width: 25%;
+    border: 0.25px solid getColor(lBlue);
+}
+
+.lubdub{
+    animation-name: beats;
+    animation-iteration-count: 1;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+
+@keyframes beats{
+    0%{
+        transform: scale(1,1);
+    }
+    50%{
+        transform: scale(1.5,1.5);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}

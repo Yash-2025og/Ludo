@@ -1,0 +1,55 @@
+$colors:(
+    lYellow:#fffb00,
+    lRed:#ff0909,
+    lGreen:#00ff00,
+    lBlue:#008cff,
+    dGreen:#0cbd15,
+    dYellow:#cfcc00,
+    dRed:#c50000,
+    dBlue:#0066b9,
+);
+
+@function getColor($colorKey){
+    @return map-get($colors, $colorKey );
+}
+
+.qzl-game-container{
+    display: flex;
+    justify-content: center;
+}
+
+.qzl-board{
+    border: 2.5px solid black;
+    padding: 2.5px;
+    position: relative;
+}
+
+
+
+.qzl-left-side{
+    border: 5px solid black;
+}
+
+.qzl-right-side{
+    border: 5px solid black;
+}
+
+.qzl-red-container{
+    border: 5px dashed getColor(dRed);
+}
+
+.qzl-green-container{
+    border: 5px dashed getColor(dGreen);
+}
+
+.qzl-yellow-container{
+    border: 5px dashed getColor(dYellow);
+}
+
+.qzl-blue-container{
+    border: 5px dashed getColor(dBlue);
+}
+
+
+
+
